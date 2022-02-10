@@ -15,18 +15,18 @@ function App() {
     }, []);
 
     const getObject = (data) => {
-    let fitlerArr = [...users]
+    let filterArr = [...users]
 
         if (data.name) {
-            fitlerArr = fitlerArr.filter(user => user.name.toLowerCase().includes(data.name));
+            filterArr = filterArr.filter(user => user.name.includes(data.name));
         }
-        if (data.name) {
-            fitlerArr = fitlerArr.filter(user => user.username.toLowerCase().includes(data.username));
+        if (data.username) {
+            filterArr = filterArr.filter(user => user.username.includes(data.username));
         }
-        if (data.name) {
-            fitlerArr = fitlerArr.filter(user => user.email.toLowerCase().includes(data.email));
+        if (data.email) {
+            filterArr = filterArr.filter(user => user.email.includes(data.email));
         }
-        setFilteredUsers(fitlerArr);
+        setFilteredUsers(filterArr);
     }
 
     return (
@@ -36,6 +36,6 @@ function App() {
 
         </div>
     );
-};
+}
 
 export default App;

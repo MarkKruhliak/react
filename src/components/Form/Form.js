@@ -12,9 +12,10 @@ const Form = ({getObject}) => {
     return (
         <div>
             <form>
-                <input type="text" name={'name'} value={value.name} onChange={getHandler}/>
-                <input type="text" name={'username'} value={value.username} onChange={getHandler}/>
-                <input type="text" name={'email'} value={value.email} onChange={getHandler}/>
+                <label>Name: <input type="text" name={'name'} value={value.name} onChange={getHandler}/></label>
+                <label>Username: <input type="text" name={'username'} value={value.username} onChange={getHandler}/></label>
+                <label>Email: <input type="text" name={'email'} value={value.email} onChange={getHandler}/></label>
+
             </form>
 
         </div>
