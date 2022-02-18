@@ -7,6 +7,8 @@ import Posts from "./Pages/Posts/Posts";
 import PostDetails from "./Pages/PostDetails/PostDetails";
 import UserPostPage from "./Pages/UserPostPage/UserPostPage";
 import PostCommentPage from "./Pages/PostCommentPage/PostCommentPage";
+import Albums from "./Pages/Albums/Albums";
+import Photos from "./Pages/Photos/Photos";
 
 const App = () => {
     return (
@@ -15,9 +17,15 @@ const App = () => {
                     <Route path={'/'} element={<Layout/>}>
 
                         <Route path={'users'} element={<Users/>}>
+
                             <Route path={':id'} element={<UserDetails/>}>
                                 <Route path={'posts'} element={<UserPostPage/>}/>
                             </Route>
+
+                            <Route path={':id/albums'} element={<Albums/>}>
+                                <Route path={':albumId/photos'} element={<Photos/>}/>
+                            </Route>
+
                         </Route>
 
                         <Route path={'posts'} element={<Posts/>}>

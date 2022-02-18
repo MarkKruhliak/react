@@ -5,8 +5,10 @@ const PostCommentPageDetails = ({comment}) => {
 
     return (
         <div>
-            <div>{name}</div>
-            <div>{body}</div>
+
+            <div>Name:  {name}</div>
+            <div>Body:  {body}</div>
+            <br/>
         </div>
     );
 };

@@ -1,13 +1,24 @@
-import React from 'react';
-import {useParams} from "react-router-dom";
+import React, {useEffect, useState} from 'react';
+import {Link, Outlet, useParams} from "react-router-dom";
+import {userService} from "../../services/user.service";
 
 const UserDetails = () => {
     let {id} = useParams();
-    console.log(id)
+
+    let [userId,setUserId] = useState([]);
+
+    useEffect(()=>{
+        userService.getById(id).then(value => setUserId(value));
+    },[id])
+
 
     return (
         <div>
-            hello
+            <div>Id:  {userId.id}</div>
+            <div>Name:  {userId.name}</div>
+            <div>Email:  {userId.email}</div>
+            <Link to={'posts'}><button>Posts</button></Link>
+            <Outlet/>
         </div>
     );
 };
