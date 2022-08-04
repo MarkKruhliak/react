@@ -3,13 +3,12 @@ import {useDispatch} from "react-redux";
 import {deleteUser} from "../redux";
 
 
-const User = ({user}) => {
-    const dispatch = useDispatch();
+const User = ({user, deleteUser}) => {
+
     return (
         <div>
-            {user && (user.map(value =><div key={value.id}> {value.name} -- {value.username}
-                <button onClick={()=>(dispatch(deleteUser(user.id)))}>Cancel</button></div>))}
-
+            {user.id} -- {user.name}
+            <button onClick={()=>deleteUser(user.id)}>Delete</button>
         </div>
 
     );

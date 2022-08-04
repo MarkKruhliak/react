@@ -1,16 +1,16 @@
 import {addUser, deleteUser, UserService} from "./redux";
 import {useDispatch, useSelector} from "react-redux";
 import User from "./components/User";
+import {useState} from "react";
 
 const App = () => {
-    const {users} = useSelector(state => state.UserReducer);
-    const dispatch = useDispatch();
-    const getter = () => {
-        UserService.getAll().then(value => dispatch(addUser({data: value})))
-    }
-    console.log(users)
+    const [users, setUsers] = useState([]);
 
-    const deleter = () => {
+    const getter = () => {
+      UserService.getAll().then(value => setUsers(value))
+    }
+
+    const deleteUser = (id) => {
 
     }
 
@@ -18,7 +18,7 @@ const App = () => {
         <div>
 
             <div>
-                {users && users.map(value => <User key={value.id} user={value}/>)}
+                {users && users.map(value => <User key={value.id} user={value} deleteUser={deleteUser}/>)}
             </div>
 
             <div>
