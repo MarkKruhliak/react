@@ -16,7 +16,7 @@ const App = () => {
 
     return (
         <div>
-            {users ? (users.map(value => <User key={value.id} user={value}/>)) : 'CLearALlTime'}
+            { users.map(value => <User key={value.id} user={value}/>)}
 
             <div>
                 <button onClick={() => getter()}>Apply</button>
