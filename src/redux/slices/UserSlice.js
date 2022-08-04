@@ -11,7 +11,7 @@ const UserSlice = createSlice({
             state.users.push(action.payload.data)
         }),
         deleteUser: ((state, action) => {
-            state.users = false
+            state.users.filter(value => value.id === action.payload.data.id)
         })
     }
 

@@ -11,16 +11,19 @@ const App = () => {
     console.log(users)
 
     const deleter = () => {
-        dispatch(deleteUser(users))
+
     }
 
     return (
         <div>
-            { users.map(value => <User key={value.id} user={value}/>)}
+
+            <div>
+                {users && users.map(value => <User key={value.id} user={value}/>)}
+            </div>
 
             <div>
                 <button onClick={() => getter()}>Apply</button>
-                <button onClick={() => deleter()}>Cancel</button>
+
             </div>
         </div>
     );
