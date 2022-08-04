@@ -8,7 +8,7 @@ const User = ({user}) => {
     return (
         <div>
             {user && (user.map(value =><div key={value.id}> {value.name} -- {value.username}
-                <button onClick={()=>(deleteUser(user.id))}>Cancel</button></div>))}
+                <button onClick={()=>(dispatch(deleteUser(user.id)))}>Cancel</button></div>))}
 
         </div>
 
