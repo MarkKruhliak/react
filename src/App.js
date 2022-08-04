@@ -1,33 +1,24 @@
-import {addUser, deleteUser, UserService} from "./redux";
+import {getAllUsers} from "./redux";
 import {useDispatch, useSelector} from "react-redux";
 import User from "./components/User";
 
 
 const App = () => {
-    const selector = useSelector(state => state.UserReducer);
+    const {users} = useSelector(state => state.UserReducer);
     const dispatch = useDispatch();
 
-    const getter = () => {
-      UserService.getAll().then(value => dispatch(addUser(value)))
-    }
 
-
-    const deleteUser = (id) => {
-
-
-    }
-
-    console.log(selector)
+    console.log(users)
 
     return (
         <div>
 
             <div>
-                { selector.map(value => <User key={value.id} user={value}/>)}
+                {users.map(value => <User key={value.id} user={value}/>)}
             </div>
 
             <div>
-                <button onClick={() => getter()}>Apply</button>
+                <button onClick={() => dispatch(getAllUsers())}>Apply</button>
 
             </div>
         </div>
