@@ -27,13 +27,12 @@ const App = () => {
     return (
         <div>
 
-            <div className={css.main}>
                 {users && users.map(value => <User key={value.id} user={value} />)}
-            </div>
 
-            <div>
+
+            <div style={{display: 'flex' }}>
                 <button onClick={() => dispatch(getAllUsers())}>Apply</button>
-
+                <UserDetails/>
             </div>
 
         </div>

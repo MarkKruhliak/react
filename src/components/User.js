@@ -9,16 +9,10 @@ const User = ({user}) => {
     const dispatch = useDispatch();
 
     return (
-        <div>
-            <div className={css.main}>
-                {user.id} -- {user.name}
-                <UserDetails/>
-            </div>
-
-                <button onClick={()=> dispatch(deleteUser(user.id))}>Delete</button>
-                <button onClick={()=> dispatch(getUserById(user.id))}>More</button>
-
-
+        <div style={{display: 'flex' }}>
+            {user.id} -- {user.name}
+                <button onClick={() => dispatch(deleteUser(user.id))}>Delete</button>
+                <button onClick={() => dispatch(getUserById(user.id))}>More</button>
 
         </div>
 
