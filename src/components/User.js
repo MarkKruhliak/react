@@ -12,10 +12,12 @@ const User = ({user}) => {
         <div>
             <div className={css.main}>
                 {user.id} -- {user.name}
-                <button onClick={()=> dispatch(deleteUser(user.id))}>Delete</button>
-                <button onClick={()=> dispatch(getUserById(user.id))}>More</button>
                 <UserDetails/>
             </div>
+
+                <button onClick={()=> dispatch(deleteUser(user.id))}>Delete</button>
+                <button onClick={()=> dispatch(getUserById(user.id))}>More</button>
+
 
 
         </div>

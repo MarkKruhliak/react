@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import User from "./components/User";
 import {useState} from "react";
 import UserDetails from "./components/UserDetails";
+import css from './components/index.css'
 
 
 const App = () => {
@@ -26,7 +27,7 @@ const App = () => {
     return (
         <div>
 
-            <div>
+            <div className={css.main}>
                 {users && users.map(value => <User key={value.id} user={value} />)}
             </div>
 
