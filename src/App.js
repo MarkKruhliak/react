@@ -34,9 +34,7 @@ const App = () => {
                 <button onClick={() => dispatch(getAllUsers())}>Apply</button>
 
             </div>
-            <div>
-                <UserDetails/>
-            </div>
+
         </div>
     );
 };
