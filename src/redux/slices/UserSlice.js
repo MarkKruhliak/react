@@ -18,7 +18,8 @@ export const getUserById = createAsyncThunk(
 const UserSlice = createSlice({
     name: "UserSlice",
     initialState : {
-        users: []
+        users: [],
+        usersId: []
     },
 
     reducers: {
@@ -34,7 +35,8 @@ const UserSlice = createSlice({
             state.users = action.payload
         },
         [getUserById.fulfilled ] : (state, action) => {
-            state.users = action.payload
+            state.usersId = action.payload
+
         }
     }
 

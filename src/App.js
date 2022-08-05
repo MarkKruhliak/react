@@ -2,6 +2,7 @@ import {getAllUsers, UserService} from "./redux";
 import {useDispatch, useSelector} from "react-redux";
 import User from "./components/User";
 import {useState} from "react";
+import UserDetails from "./components/UserDetails";
 
 
 const App = () => {
@@ -32,6 +33,9 @@ const App = () => {
             <div>
                 <button onClick={() => dispatch(getAllUsers())}>Apply</button>
 
+            </div>
+            <div>
+                <UserDetails/>
             </div>
         </div>
     );
