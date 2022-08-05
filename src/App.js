@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import User from "./components/User";
 import {useState} from "react";
 import UserDetails from "./components/UserDetails";
-import css from './components/index.css'
+
 
 
 const App = () => {
@@ -28,11 +28,11 @@ const App = () => {
         <div>
 
                 {users && users.map(value => <User key={value.id} user={value} />)}
-
-
-            <div style={{display: 'flex' }}>
-                <button onClick={() => dispatch(getAllUsers())}>Apply</button>
                 <UserDetails/>
+
+            <div>
+                <button onClick={() => dispatch(getAllUsers())}>Apply</button>
+
             </div>
 
         </div>
