@@ -1,9 +1,9 @@
 import React from 'react';
 import {useDispatch} from "react-redux";
-import {deleteUser, getUserById} from "../redux";
+import {deleteUser, getUserById} from "../../redux";
 
 
-const User = ({user}) => {
+export const User = ({user}) => {
     const dispatch = useDispatch();
 
     return (
@@ -16,4 +16,4 @@ const User = ({user}) => {
     );
 };
 
-export default User;
+

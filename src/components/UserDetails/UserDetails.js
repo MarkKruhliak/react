@@ -1,7 +1,7 @@
 import React from 'react';
 import {useSelector} from "react-redux";
 
-const UserDetails = () => {
+export const UserDetails = () => {
     const {usersId} = useSelector(state => state.UserReducer);
 
     return (
@@ -11,4 +11,4 @@ const UserDetails = () => {
     );
 };
 
-export default UserDetails;
+
