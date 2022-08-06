@@ -1,11 +1,13 @@
 import React from 'react';
+import css from "../movies.module.css"
+import {Header} from "../Header/Header";
 
-const Layout = () => {
+
+export const Layout = () => {
     return (
-        <div>
-
+        <div className={css.layout}>
+            <Header/>
         </div>
     );
 };
 
-export default Layout;
