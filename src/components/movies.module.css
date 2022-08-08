@@ -16,6 +16,7 @@ body {
 
 }
 
+
 .header_top {
     padding: 15px 0;
     display: flex;
@@ -35,5 +36,43 @@ body {
 }
 
 .header_bottom {
+    color: white;
+    padding: 100px 20px;
+    width: 294px;
+}
 
+.header_bottom_h1{
+    font-size: 48px;
+    height: 90px;
+}
+
+.header_bottom_rating {
+    display: flex;
+    gap: 30px;
+}
+
+.header_bottom_button {
+    margin: 16px 0;
+    width: 169px;
+    height: 36px;
+    background: #BE123C;
+    border: none;
+    font-size: 14px;
+    color: white;
+    border-radius: 6px;
+}
+
+.main {
+    margin: 100px 0;
+}
+.main_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.main_header p::after {
+    content: url("../images/Chevron right.png");
+    position: absolute;
 }

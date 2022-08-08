@@ -1,7 +1,7 @@
 import {getAllMovies, getAllUsers} from "./redux";
 import {useDispatch, useSelector} from "react-redux";
 
-import {AllMovies, Container, User, UserDetails} from "./components";
+import {AllMovies, Container,  User, UserDetails} from "./components";
 
 
 
@@ -28,19 +28,24 @@ const App = () => {
     return (
         <div>
             <Container/>
-            {users && users.map(value => <User key={value.id} user={value}/>)}
-            <UserDetails/>
 
 
-            <button onClick={() => dispatch(getAllUsers())}>Apply</button>
 
-            <div>
-                <button onClick={() => dispatch(getAllMovies())}>GetMovies</button>
-            </div>
 
-            <div>
-                {movies && movies.map(value => <AllMovies key={value.id} movie={value}/>)}
-            </div>
+
+            {/*{users && users.map(value => <User key={value.id} user={value}/>)}*/}
+            {/*<UserDetails/>*/}
+
+
+            {/*<button onClick={() => dispatch(getAllUsers())}>Apply</button>*/}
+
+            {/*<div>*/}
+            {/*    <button onClick={() => dispatch(getAllMovies())}>GetMovies</button>*/}
+            {/*</div>*/}
+
+            {/*<div>*/}
+            {/*    {movies && movies.map(value => <AllMovies key={value.id} movie={value}/>)}*/}
+            {/*</div>*/}
         </div>
     );
 };
