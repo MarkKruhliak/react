@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import css from "../movies.module.css"
 
 import photo from "../../images/LOGO.png"
@@ -7,12 +7,22 @@ import menu from "../../images/Menu.png"
 import rating from "../../images/MV5BMTk3ODA4Mjc0NF5BMl5BcG5nXkFtZTgwNDc1MzQ2OTE@ 1.png"
 import rating2 from "../../images/PngItem_1381056 1.png"
 import {Link} from "react-router-dom";
+import {useDispatch} from "react-redux";
+
+
 
 export const Header = () => {
 
+    const [users, setUsers] = useState(['Mark','Jackson','Murad','Iran']);
+
+
+
     const changeInput = (e) => {
-      e.preventDefault()
         console.log(e.target.value)
+        let filteredUsers = [...users]
+        if (e.target.value) {
+            filteredUsers = filteredUsers.filter(value => value)
+        }
     }
 
     return (
