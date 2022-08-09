@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {getAllMovies} from "../../redux";
+import {getAllMovies, GetOneMovie} from "../../redux";
 import {useDispatch, useSelector} from "react-redux";
 import css from "../movies.module.css"
 import {Link} from "react-router-dom";
@@ -15,9 +15,9 @@ export const AllMovies = () => {
     return (
         <div className={css.main_main_movies}>
             {movies && movies.map(value =>
-
                 <div>
-                    <Link style={{color: 'black', textDecoration: 'none'}} to={'about-film'}>
+                    <Link onClick={() => dispatch(GetOneMovie(value.id))}
+                          style={{color: 'black', textDecoration: 'none'}} to={'about-film'}>
                         <img style={{width: '250px', height: '370px'}}
                              src={`https://image.tmdb.org/t/p/w200${value.poster_path}`} alt=""/>
                         <p className={css.main_main_movies_p}>{value.id}</p>

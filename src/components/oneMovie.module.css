@@ -1,0 +1,46 @@
+.container {
+    background: url("../images/pexels-bruno-massao-2873486.jpg") no-repeat center center fixed;
+    height: 100vh;
+    background-size: cover;
+}
+
+.layout {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.header_top {
+    padding: 15px 0;
+    display: flex;
+    gap: 200px;
+    /*align-items: center;*/
+    justify-content: space-between;
+}
+
+.header_top_input {
+    height: 25px;
+    border: 2px solid #D1D5DB;
+    border-radius: 6px;
+    background-color: transparent;
+    color: white;
+    width: 400px;
+    outline: none;
+}
+
+.main_page_oneMovie {
+    display: flex;
+    gap: 50px;
+    width: 840px;
+    background-color: rgba(50, 50, 50, 0.7); /* 0.5 - полупрозрачный */
+    padding: 15px;
+    color: white;
+    position: relative;
+}
+
+.main_page_oneMovie_p::after {
+    content: url("../images/PngItem_1381056 1.png");
+    position: absolute;
+    margin-left: 5px;
+
+}

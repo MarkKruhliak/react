@@ -10,22 +10,29 @@ export const getAllMovies = createAsyncThunk(
 );
 
 
+export const GetOneMovie = createAsyncThunk(
+    'MovieSlice/GetOneMovie',
+    async (id) => {
+        return await MovieService.getOneMovie(id)
+    }
+);
 
 const MovieSlice = createSlice({
-    name: 'MovieSlice',
-    initialState: {
-        movies: []
-    },
-    reducers: {
-    },
-    extraReducers: {
-        [getAllMovies.fulfilled] : (state, action) => {
-            state.movies = action.payload
+        name: 'MovieSlice',
+        initialState: {
+            movies: [],
+            oneMovie: []
+        },
+        reducers: {},
+        extraReducers: {
+            [getAllMovies.fulfilled]: (state, action) => {
+                state.movies = action.payload
+            },
+            [GetOneMovie.fulfilled]: (state, action) => {
+                state.oneMovie = action.payload
+            }
         }
     }
-
-    }
-
 );
 
 export const MovieReducer = MovieSlice.reducer;

@@ -1,5 +1,4 @@
 export * from "./AllMovies/AllMovies"
-export * from "./Container/Container"
 export * from "./Main/Main"
 export * from "./Container/Container"
 export * from "./AboutFilm/AboutFilm"
