@@ -25,7 +25,7 @@ const MovieSlice = createSlice({
         },
         reducers: {
             Filter: ((state, action) => {
-                state.movies = state.movies.filter(value => value.original_title.includes(action.payload).toUpperCase())
+                state.movies = state.movies.filter(value => value.username.toUpperCase().includes(action.payload.toUpperCase()))
             })
         },
         extraReducers: {
@@ -40,5 +40,5 @@ const MovieSlice = createSlice({
 );
 
 export const MovieReducer = MovieSlice.reducer;
-export const FilterArray = MovieSlice.actions;
+export const FilterArray = MovieSlice.actions.Filter;
 

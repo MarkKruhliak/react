@@ -12,6 +12,9 @@ export const AllMovies = () => {
         dispatch(getAllMovies())
     }, [])
 
+
+
+
     return (
         <div className={css.main_main_movies}>
             {movies && movies.map(value =>
