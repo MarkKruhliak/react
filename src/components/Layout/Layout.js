@@ -3,9 +3,7 @@ import css from "../movies.module.css"
 
 import {Header} from "../Header/Header";
 import {Main} from "../Main/Main";
-
-
-
+import {Footter} from "../Footter/Footter";
 
 
 export const Layout = () => {
@@ -13,6 +11,7 @@ export const Layout = () => {
         <div className={css.layout}>
             <Header/>
             <Main/>
+            <Footter/>
         </div>
     );
 };

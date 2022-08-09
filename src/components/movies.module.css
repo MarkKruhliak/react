@@ -6,7 +6,6 @@ body {
     background: url("../images/Poster.jpg") no-repeat center center fixed;
     height: 100vh;
     background-size: cover;
-
 }
 
 .layout {
@@ -15,7 +14,6 @@ body {
     margin: 0 auto;
 
 }
-
 
 .header_top {
     padding: 15px 0;
@@ -41,7 +39,7 @@ body {
     width: 294px;
 }
 
-.header_bottom_h1{
+.header_bottom_h1 {
     font-size: 48px;
     height: 90px;
 }
@@ -65,14 +63,93 @@ body {
 .main {
     margin: 100px 0;
 }
+
 .main_header {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-
 .main_header p::after {
     content: url("../images/Chevron right.png");
     position: absolute;
+}
+
+.main_main_movies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 66px;
+}
+
+.main_main_movies_p {
+    color: black;
+    opacity: 0.3;
+    margin: 0;
+}
+
+.main_main_movies_p2 {
+    margin: 7px 0;
+}
+
+.main_main_movies_p2::before {
+    content: url("../images/MV5BMTk3ODA4Mjc0NF5BMl5BcG5nXkFtZTgwNDc1MzQ2OTE@ 1.png");
+}
+
+.main_main_movies_p3::before {
+    content: url("../images/PngItem_1381056 1.png");
+    position: absolute;
+    margin: 0 -25px;
+}
+
+.main_footer {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.main_footer p::after {
+    content: url("../images/Chevron right.png");
+    position: absolute;
+}
+
+.main_movies_footer {
+    display: flex;
+    gap: 80px;
+    position: relative;
+}
+
+.main_movies_footer::before {
+    content: url("../images/chevronleft.png");
+    position: absolute;
+    left: -50px;
+    top: 160px
+}
+
+.main_movies_footer::after {
+    content: url("../images/Chevron right (1).png");
+    position: absolute;
+    right: -85px;
+    top: 160px;
+}
+
+.footer {
+    margin: 120px auto;
+    width: 492px;
+    height: 145px;
+}
+
+.footer_img {
+    display: flex;
+    justify-content: space-between;
+    height: 27px;
+    margin: 0 100px;
+}
+
+.footer_p {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
 }

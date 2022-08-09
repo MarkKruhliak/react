@@ -1,9 +1,7 @@
 import {getAllMovies, getAllUsers} from "./redux";
 import {useDispatch, useSelector} from "react-redux";
 
-import {AllMovies, Container,  User, UserDetails} from "./components";
-
-
+import {AllMovies, Container, User, UserDetails} from "./components";
 
 
 const App = () => {
@@ -23,16 +21,10 @@ const App = () => {
     //     setState(users)
     // }
 
-    console.log(users)
 
     return (
         <div>
             <Container/>
-
-
-
-
-
             {/*{users && users.map(value => <User key={value.id} user={value}/>)}*/}
             {/*<UserDetails/>*/}
 
