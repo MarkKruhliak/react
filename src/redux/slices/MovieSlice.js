@@ -23,7 +23,11 @@ const MovieSlice = createSlice({
             movies: [],
             oneMovie: []
         },
-        reducers: {},
+        reducers: {
+            Filter: ((state, action) => {
+
+            })
+        },
         extraReducers: {
             [getAllMovies.fulfilled]: (state, action) => {
                 state.movies = action.payload

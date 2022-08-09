@@ -10,6 +10,10 @@ import {Link} from "react-router-dom";
 
 export const Header = () => {
 
+    const changeInput = (e) => {
+      e.preventDefault()
+        console.log(e.target.value)
+    }
 
     return (
         <div>
@@ -17,7 +21,7 @@ export const Header = () => {
                 <Link to={'/'}>
                     <img src={photo} alt=""/>
                 </Link>
-                <input className={css.header_top_input} src={search} type="search"/>
+                <input className={css.header_top_input} src={search} type="search" onChange={changeInput}/>
                 <img src={menu} style={{height: '36px'}} alt=""/>
             </div>
             <div className={css.header_bottom}>
