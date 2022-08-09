@@ -6,6 +6,7 @@ import search from "../../images/Search (1).png"
 import menu from "../../images/Menu.png"
 import rating from "../../images/MV5BMTk3ODA4Mjc0NF5BMl5BcG5nXkFtZTgwNDc1MzQ2OTE@ 1.png"
 import rating2 from "../../images/PngItem_1381056 1.png"
+import {Link} from "react-router-dom";
 
 export const Header = () => {
 
@@ -13,7 +14,9 @@ export const Header = () => {
     return (
         <div>
             <div className={css.header_top}>
-                <img src={photo} alt=""/>
+                <Link to={'/'}>
+                    <img src={photo} alt=""/>
+                </Link>
                 <input className={css.header_top_input} src={search} type="search"/>
                 <img src={menu} style={{height: '36px'}} alt=""/>
             </div>

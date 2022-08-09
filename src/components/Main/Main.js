@@ -14,7 +14,6 @@ export const Main = () => {
 
     return (
         <div className={css.main}>
-            <Outlet/>
             <div className={css.main_header}>
                 <h2>Featured Movie</h2>
                 <p>See more</p>
