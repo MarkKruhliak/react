@@ -7,24 +7,21 @@ import menu from "../../images/Menu.png"
 import rating from "../../images/MV5BMTk3ODA4Mjc0NF5BMl5BcG5nXkFtZTgwNDc1MzQ2OTE@ 1.png"
 import rating2 from "../../images/PngItem_1381056 1.png"
 import {Link} from "react-router-dom";
-import {useDispatch} from "react-redux";
-
 
 
 export const Header = () => {
 
-    const [users, setUsers] = useState(['Mark','Jackson','Murad','Iran']);
-
+    const [users, setUsers] = useState([{username: 'Mark'}, {username: 'Jackson'}, {username: 'Murad'}, {username: 'Iran'}]);
 
 
     const changeInput = (e) => {
-        console.log(e.target.value)
-        let filteredUsers = [...users]
-        if (e.target.value) {
-            filteredUsers = filteredUsers.filter(value => value)
-        }
-    }
 
+        let filteredUsers = [...users]
+            let filter = filteredUsers.filter(value => value.name.includes(e.target.value))
+            console.log(filter)
+            setUsers(filter)
+    }
+    console.log(users)
     return (
         <div>
             <div className={css.header_top}>
@@ -45,6 +42,7 @@ export const Header = () => {
                     hit men and women everywhere.</p>
                 <button className={css.header_bottom_button}>Watch Trailer
                 </button>
+                {users && users.map(value => <div>{value.username}</div>)}
             </div>
         </div>
 
