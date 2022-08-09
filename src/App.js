@@ -1,4 +1,5 @@
-import {Container} from "./components";
+import {AboutFilm, Container} from "./components";
+import {Route, Routes} from "react-router-dom";
 
 
 const App = () => {
@@ -6,7 +7,11 @@ const App = () => {
 
     return (
         <div>
-            <Container/>
+            <Routes>
+                <Route path={'/'} element={<Container/>}>
+                    <Route path={'about-film'} element={<AboutFilm/>}/>
+                </Route>
+            </Routes>
         </div>
     );
 };

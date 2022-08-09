@@ -6,6 +6,7 @@ import ryan from "../../images/Picture.png"
 import timothee from "../../images/Picture (1).png"
 import chloe from "../../images/Picture (2).png"
 import keanu from "../../images/Container.png"
+import {Outlet} from "react-router-dom";
 
 
 export const Main = () => {
@@ -13,6 +14,7 @@ export const Main = () => {
 
     return (
         <div className={css.main}>
+            <Outlet/>
             <div className={css.main_header}>
                 <h2>Featured Movie</h2>
                 <p>See more</p>
