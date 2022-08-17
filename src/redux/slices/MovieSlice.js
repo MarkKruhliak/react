@@ -7,6 +7,13 @@ export const getAllMovies = createAsyncThunk(
     async () => {
         return await MovieService.getAll()
     }
+)
+
+export const getFilteredMovies = createAsyncThunk(
+    'MovieSlice/getFilteredMovies',
+    async () => {
+        return await MovieService.getAll()
+    }
 );
 
 
@@ -21,16 +28,19 @@ const MovieSlice = createSlice({
         name: 'MovieSlice',
         initialState: {
             movies: [],
+            filteredMovie: [],
+
             oneMovie: []
         },
-        reducers: {
-            Filter: ((state, action) => {
-                state.movies = state.movies.filter(value => value.username.toUpperCase().includes(action.payload.toUpperCase()))
-            })
-        },
+        reducers: {},
         extraReducers: {
             [getAllMovies.fulfilled]: (state, action) => {
                 state.movies = action.payload
+            },
+            [getFilteredMovies.fulfilled]: (state, action) => {
+                state.filteredMovie = action.payload
+                // console.log(state.filteredMovie);
+                // console.log(state.filteredMovie);
             },
             [GetOneMovie.fulfilled]: (state, action) => {
                 state.oneMovie = action.payload
@@ -40,5 +50,4 @@ const MovieSlice = createSlice({
 );
 
 export const MovieReducer = MovieSlice.reducer;
-export const FilterArray = MovieSlice.actions.Filter;
 

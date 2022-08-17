@@ -1,16 +1,17 @@
 import React, {useEffect} from 'react';
-import {getAllMovies, GetOneMovie} from "../../redux";
+import {getAllMovies,  GetOneMovie} from "../../redux";
 import {useDispatch, useSelector} from "react-redux";
 import css from "../movies.module.css"
 import {Link} from "react-router-dom";
 
-export const AllMovies = () => {
-    const {movies} = useSelector(state => state.MovieReducer);
+export const AllMovies = ({movies, filteredMovies}) => {
+    // const {movies} = useSelector(state => state.MovieReducer);
+    // console.log(movies)
     const dispatch = useDispatch();
 
-    useEffect(() => {
-        dispatch(getAllMovies())
-    }, [])
+    // useEffect(() => {
+    //     dispatch(getAllMovies())
+    // }, [])
 
 
 
