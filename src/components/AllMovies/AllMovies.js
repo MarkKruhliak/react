@@ -4,7 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import css from "../movies.module.css"
 import {Link} from "react-router-dom";
 
-export const AllMovies = ({movies, filteredMovies}) => {
+export const AllMovies = ({ filteredMovies}) => {
     // const {movies} = useSelector(state => state.MovieReducer);
     // console.log(movies)
     const dispatch = useDispatch();
@@ -18,7 +18,7 @@ export const AllMovies = ({movies, filteredMovies}) => {
 
     return (
         <div className={css.main_main_movies}>
-            {movies && movies.map(value =>
+            {filteredMovies && filteredMovies.map(value =>
                 <div>
                     <Link onClick={() => dispatch(GetOneMovie(value.id))}
                           style={{color: 'black', textDecoration: 'none'}} to={'about-film'}>
