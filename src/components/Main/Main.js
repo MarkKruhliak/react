@@ -20,7 +20,8 @@ export const Main = () => {
 
 
     useEffect(() => {
-        MovieService.getAll().then(value => setMovies(value) )
+        MovieService.getAll().then(value => setMovies([...value])
+        )
     }, [])
 
 
