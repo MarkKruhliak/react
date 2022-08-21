@@ -13,29 +13,26 @@ import {MovieService} from "../../redux";
 
 export const Main = () => {
 
-
     const [filterStay, setFilterStay] = useState([]);
     const [movies, setMovies] = useState([]);
 
 
-
     useEffect(() => {
-        MovieService.getAll().then(value =>
-            setMovies([...value])
-
+        MovieService.getAll().then(value => {
+                setMovies([...value])
+                setFilterStay([...value])
+            }
         )
     }, [])
 
 
     const changeInput = (e) => {
         let allMovies = [...movies]
-        console.log(allMovies);
+
         let filteredMovies = allMovies.filter(value => value.original_title.toUpperCase().includes(e.target.value.toUpperCase()))
-        console.log(filteredMovies);
+
         setFilterStay(filteredMovies)
-        // let filter = filteredUsers.filter(value => value.username.toUpperCase().includes(e.target.value.toUpperCase()))
-        // console.log(filter)
-        // setUsers(filter)
+
     }
 
 
@@ -43,9 +40,9 @@ export const Main = () => {
         <div className={css.main}>
             <div className={css.main_header}>
                 <h2>Featured Movie</h2>
-                <p>See more</p>
+
+                <input style={{color: "black"}} className={css.header_top_input} src={search} type="search" onChange={changeInput}/>
             </div>
-            <input className={css.header_top_input} src={search} type="search" onChange={changeInput}/>
             <AllMovies movies={movies} filteredMovies={filterStay}/>
             <div className={css.main_footer}>
                 <h2>Featured Casts</h2>

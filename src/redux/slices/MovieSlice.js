@@ -29,7 +29,6 @@ const MovieSlice = createSlice({
         initialState: {
             movies: [],
             filteredMovie: [],
-
             oneMovie: []
         },
         reducers: {},
